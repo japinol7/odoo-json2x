@@ -94,7 +94,7 @@ class Json2Client:
                 connect=self._connection.timeout_connect,
                 ),
             headers={
-                "Content-Type": "application/json-rpc",
+                "Content-Type": "application/json-rpc; charset=utf-8",
                 "User-Agent": f"odoo-json2x/{VERSION} (httpx/{httpx.__version__})",
                 },
             proxy=self._connection.proxy_url,
@@ -117,7 +117,7 @@ class Json2Client:
                 connect=self._connection.timeout_connect,
                 ),
             headers={
-                "Content-Type": "application/json",
+                "Content-Type": "application/json; charset=utf-8",
                 "User-Agent": f"odoo-json2x/{VERSION} (httpx/{httpx.__version__})",
                 },
             proxy=self._connection.proxy_url,
