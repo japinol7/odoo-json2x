@@ -128,24 +128,26 @@ class Json2Client:
     # ---------------------------
     # CRUD methods
     # ---------------------------
-    def create(self, model: str, vals: Union[dict, list[dict]]) -> JSON:
+    def create(self, model: str, vals: Union[dict, list[dict]], **kwargs: Any
+        ) -> JSON:
         """Creates a document object with the specified values."""
-        return self.call(model, "create", vals_list=vals)
+        return self.call(model, "create", vals_list=vals, **kwargs)
 
-    def read(self, model: str, ids: list, fields: Optional[list] = None) -> JSON:
+    def read(self, model: str, ids: list, fields: Optional[list] = None, **kwargs: Any
+        ) -> JSON:
         """Gets the values of the document object for the specified ids."""
-        return self.call(model, "read", ids=ids, fields=fields)
+        return self.call(model, "read", ids=ids, fields=fields, **kwargs)
 
     def read_group(
             self, model: str, domain: list, fields: Optional[list] = None,
-            group_by: Optional[list] = None,
+            group_by: Optional[list] = None, **kwargs: Any
         ) -> JSON:
         """Returns a list of dictionaries with the aggregate results
         grouped by the `group_by` field.
         """
         return self.call(
             model, "read_group", domain=domain,
-            groupby=group_by, fields=fields)
+            groupby=group_by, fields=fields, **kwargs)
 
     def search(
             self, model: str, domain: list, limit=DEFAULT_LIMIT, **kwargs: Any
@@ -184,12 +186,13 @@ class Json2Client:
 
         return res
 
-    def write(self, model: str, ids: list, vals: dict) -> JSON:
+    def write(self, model: str, ids: list, vals: dict, **kwargs: Any
+        ) -> JSON:
         """Updates the document objects for the specified ids with the specified
         values.
         """
-        return self.call(model, "write", ids=ids, vals=vals)
+        return self.call(model, "write", ids=ids, vals=vals, **kwargs)
 
-    def unlink(self, model: str, ids: list) -> JSON:
+    def unlink(self, model: str, ids: list, **kwargs: Any) -> JSON:
         """Deletes the document objects that match the specified ids."""
-        return self.call(model, "unlink", ids=ids)
+        return self.call(model, "unlink", ids=ids, **kwargs)
