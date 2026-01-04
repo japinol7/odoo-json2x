@@ -71,6 +71,10 @@ class Json2Client:
     # ---------------------------
     def call(self, model: str, method: str, **params: Any) -> JSON:
         """Call any Odoo model.method."""
+        if self._context:
+            local_context = params.get("context", {})
+            params["context"] = {**self._context, **local_context}
+
         url = f"{self._connection._url_root}{model}/{method}"
         response = self._connection._client.post(url, json=params)
         return self._handle_response(response)
