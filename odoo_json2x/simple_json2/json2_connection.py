@@ -4,7 +4,7 @@ __author__ = 'Joan A. Pinol  (japinol)'
 
 from typing import Any, TypeAlias
 
-import httpx
+import httpx2 as httpx
 
 from .config import (
     CLIENT_NAME,

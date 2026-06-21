@@ -4,7 +4,7 @@ __author__ = 'Joan A. Pinol  (japinol)'
 
 from typing import Any, TypeAlias, Optional, Union
 
-import httpx
+import httpx2 as httpx
 
 from .exceptions import OdooJson2Error
 from .config import CLIENT_NAME

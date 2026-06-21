@@ -2,7 +2,7 @@
     Simple Odoo json-2 client using 'httpx' as the underlying transport.
 <br>
 
-	version: 0.0.1
+	version: 0.0.2
 	author: Joan A. Pinol
 	author_nickname: japinol
 	author_gitHub: japinol7
@@ -10,7 +10,7 @@
 <br>
 
 	Dependencies: httpx.
-	Python requires: 3.13 or greater.
+	Python requires: 3.14 or greater.
     Tested against Odoo 19.0 CE.
 <br>
 
@@ -39,7 +39,7 @@
 ### Install the last package tag released from this repo in your project
 Add this to your requirements.txt file: <br>
 
-    git+https://github.com/japinol7/odoo-json2x.git@v0.0.1
+    git+https://github.com/japinol7/odoo-json2x.git@v0.0.2
 
 <br>
 Alternatively, if you use an uv toml file: <br>
@@ -49,7 +49,7 @@ Alternatively, if you use an uv toml file: <br>
     ]
     
     [tool.uv.sources]
-    odoo-json2x = { git = "https://github.com/japinol7/odoo-json2x.git", rev = "v0.0.1" }
+    odoo-json2x = { git = "https://github.com/japinol7/odoo-json2x.git", rev = "v0.0.2" }
 
 <br>
 .

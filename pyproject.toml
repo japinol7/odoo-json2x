@@ -1,13 +1,13 @@
 [project]
 name = "odoo-json2x"
 authors = [{name = "Joan A. Pinol  (japinol)"}]
-version = "0.0.1"
+version = "0.0.2"
 classifiers = [
     "License :: MIT License",
 ]
-requires-python=">=3.13"
+requires-python=">=3.14"
 dependencies = [
-    "httpx>=0.28.1,<2",
+    "httpx2>=2.4.0,<3",
 ]
 
 [project.optional-dependencies]
